@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Vehicles from "./components/report_components/vehicles";
 import User from "./components/report_components/user";
 import Info from "./components/report_components/info";
+import ProfilePage from './components/report_components/userProfile';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="users" element={<User />} />
             <Route path="vehicles" element={<Vehicles />} />
             <Route path="info" element={<Info />} />
+            {/* <Route path="profile" element={<ProfilePage />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
