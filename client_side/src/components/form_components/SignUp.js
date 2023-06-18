@@ -23,7 +23,7 @@ export default function Signup() {
   // Handle Signup API Integration here
   const createAccount = () => {
     axios
-      .post('http://localhost:2000/api/users/signup', signupState)
+      .post('http://localhost:8000/api/v1/user/register', signupState)
       .then((response) => {
         // Handle the response from the API
         console.log(response.data);

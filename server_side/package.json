@@ -1,29 +1,41 @@
 {
-  "name": "server_side",
+  "name": "restfull_vehicle_tracking_ne_backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon",
-    "start": "node server.js",
-    "test": "jest --detectOpenHandles --coverage"
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "swagger-autogen": "node sample.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cloudinary": "^1.37.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dotenv": "^16.1.4",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^7.0.0",
+    "hpp": "^0.2.3",
     "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.2.2",
-    "mongoose-paginate-v2": "^1.7.1",
-    "nodemon": "^2.0.22",
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^4.6.3",
-    "uuid": "^9.0.0"
+    "mongoose": "^7.1.0",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^4.1.6",
+    "swaggiffy": "^1.0.5",
+    "xss": "^1.0.14",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "swagger-autogen": "^2.23.2"
   }
 }

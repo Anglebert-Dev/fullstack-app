@@ -28,7 +28,7 @@ export default function Login() {
   // Handle Login API Integration here
   const authenticateUser = () => {
     axios
-      .post('http://localhost:2000/api/users/login', loginState)
+      .post('http://localhost:8000/api/v1/user/login', loginState)
       .then((response) => {
         const { token } = response.data;
         // Store the token securely in the client-side storage (e.g., cookies, local storage)
