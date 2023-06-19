@@ -18,12 +18,13 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="users" element={<User />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/dashboard/*" element={<Dashboard />}>
             <Route path="users" element={<User />} />
             <Route path="vehicles" element={<Vehicles />} />
             <Route path="info" element={<Info />} />
-            {/* <Route path="profile" element={<ProfilePage />} /> */}
           </Route>
+          
         </Routes>
       </BrowserRouter>
     </div>

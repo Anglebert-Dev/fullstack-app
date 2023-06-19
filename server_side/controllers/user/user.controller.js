@@ -6,8 +6,6 @@ const {
 } = require("../../models/user/user.model");
 
 exports.registerAdmin = async (req, res) => {
-    // #swagger.tags = ['User']
-     // #swagger.description = 'Endpoint to register an admin'
     try {
         const {
             names,
@@ -76,11 +74,26 @@ exports.registerAdmin = async (req, res) => {
         });
     }
 }
+// current user
+exports.getCurrentUser = async (req, res) => {
+    try {
+  
+      const result = await User.findOne({
+        _id: req.user._id
+      });
+  
+      return res.status(201).send({
+        message: 'OK',
+        data: result
+      });
+    } catch (e) {
+      return res.status(500).send(e.toString().split('\"').join(''))
+    }
+  }
+  
 
 //login 
 exports.login = async (req, res) => {
-    // #swagger.tags = ['User']
-        // #swagger.description = 'Endpoint to login an admin'
     const {
         email,
         password

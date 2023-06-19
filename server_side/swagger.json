@@ -52,7 +52,7 @@
                         "properties": {
                             "names": {
                                 "type": "string",
-                                "example": "Shumbusho David"
+                                "example": "anglebert"
                             },
                             "phoneNumber": {
                                 "type": "string",
@@ -60,7 +60,7 @@
                             },
                             "email": {
                                 "type": "string",
-                                "example": "davidshumbusho10@gmail.com"
+                                "example": "123@gmail.com"
                             },
                             "password": {
                                 "type": "string"
@@ -75,6 +75,30 @@
                             }
                         }
                     }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/api/v1/user/current": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get the current User",
+                "description": "Get the current user",
+                "operationId": "getCurrentUser",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
                 ],
                 "responses": {
                     "200": {
@@ -109,7 +133,7 @@
                         "properties": {
                             "email": {
                                 "type": "string",
-                                "example": "davidshumbusho10@gmail.com"
+                                "example": "12310@gmail.com"
                             },
                             "password": {
                                 "type": "string",
@@ -151,7 +175,7 @@
                         "properties": {
                             "names": {
                                 "type": "string",
-                                "example": "Shumbusho David"
+                                "example": "Shumbusho "
                             },
                             "phoneNumber": {
                                 "type": "string",
